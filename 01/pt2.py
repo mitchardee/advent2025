@@ -8,10 +8,7 @@ for x in lines:
     a %= 100
 
     newPos = pos + (1 if x[0] == 'R' else -1) * a
-
-    if (newPos <= 0 and pos > 0) or newPos >= 100:
-        ret += 1
-
+    ret += int(newPos <= 0 < pos or newPos >= 100)
     pos = newPos % 100
 
 print(ret)
